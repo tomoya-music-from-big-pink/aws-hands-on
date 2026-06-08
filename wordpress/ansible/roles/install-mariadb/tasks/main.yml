@@ -1,0 +1,6 @@
+- name: Install MariaDB
+  ansible.builtin.dnf:
+    name: mariadb
+    state: latest
+  tags:
+    - install-mariadb

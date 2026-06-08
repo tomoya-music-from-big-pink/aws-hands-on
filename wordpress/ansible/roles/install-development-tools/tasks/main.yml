@@ -1,0 +1,6 @@
+- name: Install the 'Development tools' package group
+  ansible.builtin.dnf:
+    name: '@Development tools'
+    state: present
+  tags:
+    - install-development-tools

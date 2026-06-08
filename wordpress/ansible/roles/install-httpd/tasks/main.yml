@@ -1,0 +1,14 @@
+- name: Install the latest version of Apache
+  ansible.builtin.dnf:
+    name: httpd
+    state: latest
+  tags:
+    - install-httpd
+
+- name: Enable service httpd
+  ansible.builtin.systemd_service:
+    name: httpd
+    enabled: true
+    state: started
+  tags:
+    - install-httpd

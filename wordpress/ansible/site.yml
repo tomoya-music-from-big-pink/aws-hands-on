@@ -1,0 +1,12 @@
+- hosts: all
+  remote_user: ec2-user
+  become: true
+  become_method: sudo
+  roles:
+    - upgrade-all-packages
+    - install-development-tools
+    - install-httpd
+    - install-mariadb
+    - install-php
+    - disable-selinux
+    - install-wordpress
