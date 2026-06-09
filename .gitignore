@@ -15,3 +15,29 @@ crash.log
 
 # For built boxes
 *.box
+
+### Terraform
+# Local directory for Terraform data (contains providers, modules, and plugins)
+.terraform/
+
+# Local state files (Can contain sensitive secrets in plain text)
+*.tfstate
+*.tfstate.*
+
+# Crash logs (In case Terraform crashes)
+crash.log
+crash.*.log
+
+# Exclude all variable files as they often contain secrets
+*.tfvars
+*.tfvars.json
+
+# Exclude override files (Used for local adjustments)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include CLI configuration files
+.terraformrc
+terraform.rc
