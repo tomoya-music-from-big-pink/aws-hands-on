@@ -7,11 +7,15 @@ packer {
   }
 }
 
+variable "ami_id" {
+  type = string
+}
+
 source "amazon-ebs" "wordpress" {
   ami_name      = "wordpress"
   instance_type = "t2.micro"
   region        = "ap-northeast-1"
-  source_ami    = "ami-0fd541d6f6b7c5d3b"
+  source_ami    = "${var.ami_id}"
   ssh_username  = "ec2-user"
 }
 
